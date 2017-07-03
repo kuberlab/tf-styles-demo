@@ -12,7 +12,9 @@ Images:
 Jupyter:
   UseGPU: false
 MonitoringNamespace: kuberlab
-PythonPackages: null
+PythonPackages:
+  - pillow
+  - scipy
 Requests:
   CPU: 100m
   CPULimit: 8000m
