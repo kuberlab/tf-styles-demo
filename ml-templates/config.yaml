@@ -10,7 +10,7 @@ Images:
   GpuImage: kuberlab/gpu-monitoring:latest
   PSImage: tensorflow/tensorflow
 Jupyter:
-  UseGPU: true
+  UseGPU: false
 MonitoringNamespace: kuberlab
 PythonPackages: null
 Requests:
