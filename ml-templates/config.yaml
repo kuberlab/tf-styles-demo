@@ -26,9 +26,7 @@ Volumes:
   isTrainLogDir: true
   mountPath: /training
   name: training
-  nfs:
-    path: /kuberlab
-    server: 192.168.1.55
+  clusterStorage: {{ .storage }}
   subPath: training
 - gitRepo:
     repository: https://github.com/dreyk/fast-style-transfer
@@ -41,22 +39,17 @@ Volumes:
   isTrainLogDir: false
   mountPath: /workspace/lib
   name: lib
-  nfs:
-    path: /kuberlab
-    server: 192.168.1.55
+  clusterStorage: {{ .storage }}
   subPath: lib
-- hostPath:
-    path: /fast-data
-  isLibDir: false
+- isLibDir: false
   isTrainLogDir: false
   mountPath: /workspace/data
   name: data
-  subPath: ""
+  clusterStorage: {{ .storage }}
+  subPath: /styles-transfer-data
 - isLibDir: false
   isTrainLogDir: false
   mountPath: /test
   name: test
-  nfs:
-    path: /kuberlab
-    server: 192.168.1.55
+  clusterStorage: {{ .storage }}
   subPath: test
