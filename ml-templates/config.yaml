@@ -43,12 +43,13 @@ Volumes:
   name: lib
   clusterStorage: {{ .storage }}
   subPath: lib
-- isLibDir: false
+- hostPath:
+    path: /fast-data
+  isLibDir: false
   isTrainLogDir: false
   mountPath: /workspace/data
   name: data
-  clusterStorage: {{ .storage }}
-  subPath: /styles-transfer-data
+  subPath: ""
 - isLibDir: false
   isTrainLogDir: false
   mountPath: /test
