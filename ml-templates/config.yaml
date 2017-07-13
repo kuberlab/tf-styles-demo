@@ -7,7 +7,7 @@ EnvVars: []
 ExecutionDir: /src/fast-style-transfer
 Images:
   BaseImage: tensorflow/tensorflow
-  GpuImage: kuberlab/gpu-monitoring:latest
+  GpuImage: tensorflow/tensorflow:latest-gpu
   PSImage: tensorflow/tensorflow
 Jupyter:
   UseGPU: false
