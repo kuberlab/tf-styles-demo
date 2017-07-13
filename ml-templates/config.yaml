@@ -7,7 +7,7 @@ EnvVars: []
 ExecutionDir: /src/fast-style-transfer
 Images:
   BaseImage: tensorflow/tensorflow
-  GpuImage: tensorflow/tensorflow:latest-gpu
+  GpuImage: tensorflow/tensorflow:1.2.0-gpu
   PSImage: tensorflow/tensorflow
 Jupyter:
   UseGPU: false
